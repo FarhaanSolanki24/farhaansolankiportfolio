@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Farhaan Solanki — Front-End Developer</title>
+<meta name="description" content="Farhaan Solanki, Front-End Developer building data-dense React interfaces in Mumbai, India." />
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-top">
+    <span class="brand-mark">FS</span>
+    <span class="brand-name">Farhaan Solanki</span>
+  </div>
+  <ul class="nav-list">
+    <li><a href="#overview" class="nav-link active" data-section="overview">Overview</a></li>
+    <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+    <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+    <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+    <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+    <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+  </ul>
+  <div class="sidebar-bottom">
+    <span class="status-dot" aria-hidden="true"></span>
+    <span>Open to new roles</span>
+  </div>
+</nav>
+
+<main class="content">
+
+  <!-- OVERVIEW -->
+  <section id="overview" class="panel hero-panel">
+    <div class="hero-text">
+      <p class="hero-kicker">Front-End Developer · Mumbai, India</p>
+      <h1>Farhaan Solanki</h1>
+      <p class="hero-tagline">I build data-dense React interfaces — dashboards, auth flows, and the API layers that keep them fast and predictable.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:farhansolanki111@gmail.com">Get in touch</a>
+        <a class="btn btn-ghost" href="https://github.com/FarhaanSolanki24" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/mohd-farhaan-sadiq-solanki-/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-chart" aria-hidden="true">
+      <svg viewBox="0 0 320 140" class="sparkline">
+        <polyline class="sparkline-fill" points="0,120 40,100 80,108 120,70 160,80 200,40 240,52 280,18 320,26 320,140 0,140" />
+        <polyline class="sparkline-line" points="0,120 40,100 80,108 120,70 160,80 200,40 240,52 280,18 320,26" />
+      </svg>
+    </div>
+  </section>
+
+  <section class="panel stat-grid">
+    <div class="stat-tile">
+      <span class="stat-value">1+</span>
+      <span class="stat-label">Year in production</span>
+    </div>
+    <div class="stat-tile">
+      <span class="stat-value">3</span>
+      <span class="stat-label">Internal tools shipped</span>
+    </div>
+    <div class="stat-tile">
+      <span class="stat-value">4</span>
+      <span class="stat-label">Person product team</span>
+    </div>
+    <div class="stat-tile">
+      <span class="stat-value">4</span>
+      <span class="stat-label">Full-stack portfolio projects</span>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="panel">
+    <div class="panel-head">
+      <h2>Experience</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-body">
+          <div class="timeline-heading">
+            <h3>Front-End Developer</h3>
+            <span class="timeline-meta">DigitalSalt Technologies · May 2025 – Present · Mumbai, India</span>
+          </div>
+          <ul class="bullet-list">
+            <li>Front-end engineer on a 4-person product team, building and maintaining 3 internal SaaS tools used daily across the company.</li>
+            <li>Re-architected the component layer around Redux Toolkit slices, removing prop-drilling and cutting state-related bugs by an estimated 25%.</li>
+            <li>Built a centralized API middleware layer with retry logic and error boundaries, reducing user-facing error reports by an estimated 20%.</li>
+            <li>Implemented JWT-based authentication with RBAC across Admin, Manager, and Employee roles, in production since launch.</li>
+            <li>Improved render performance using React.memo, useMemo, and route-level lazy loading, cutting initial load time by an estimated 30%.</li>
+            <li>Worked directly with backend engineering to define API contracts upfront, cutting integration rework by roughly half each sprint.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="panel">
+    <div class="panel-head">
+      <h2>Projects</h2>
+    </div>
+    <div class="project-grid">
+
+      <article class="project-card">
+        <img class="project-card-media" src="assets/saas-analytics.jpg" alt="SaaS Analytics Dashboard — revenue, orders, and customer KPI overview" loading="lazy" />
+        <div class="project-card-top">
+          <h3>SaaS Analytics Dashboard</h3>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <p>A multi-tenant analytics dashboard for a B2B SaaS-style product — live KPI cards, filterable data tables, and Recharts-powered time-series charts on a normalized Redux store.</p>
+        <ul class="bullet-list compact">
+          <li>Role-based dashboard views (Admin vs. Viewer) with protected routes and a permission context.</li>
+          <li>Reusable <code>useFetch</code> hook with debouncing, caching, and abort-on-unmount.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">React</span><span class="tag">Redux Toolkit</span><span class="tag">Recharts</span><span class="tag">REST APIs</span><span class="tag">Tailwind CSS</span>
+        </div>
+        <a class="btn btn-ghost btn-small" href="https://saas-analytics-dashboard.vercel.app/" target="_blank" rel="noopener">View live →</a>
+      </article>
+
+      <article class="project-card">
+        <img class="project-card-media" src="assets/insightdesk.jpg" alt="InsightDesk landing page — AI feedback intelligence dashboard" loading="lazy" />
+        <div class="project-card-top">
+          <h3>InsightDesk</h3>
+          <span class="live-badge"><span class="live-dot"></span>Live</span>
+        </div>
+        <p>AI feedback intelligence dashboard that scores customer feedback sentiment, extracts recurring themes, and generates a prioritized action list using the Gemini API.</p>
+        <ul class="bullet-list compact">
+          <li>Express middleware layer with a rule-based fallback analyzer, so it demos reliably without a live API key.</li>
+          <li>Custom SVG sentiment gauge alongside Recharts visualizations.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">React</span><span class="tag">Express.js</span><span class="tag">Gemini API</span><span class="tag">Recharts</span><span class="tag">Tailwind CSS</span>
+        </div>
+        <a class="btn btn-ghost btn-small" href="https://insightdesk-ai.netlify.app/" target="_blank" rel="noopener">View live →</a>
+      </article>
+
+      <article class="project-card">
+        <img class="project-card-media" src="assets/attendance-ms.jpg" alt="Attendance Management System — admin dashboard overview" loading="lazy" />
+        <div class="project-card-top">
+          <h3>Attendance Management System</h3>
+          <span class="code-badge">Code</span>
+        </div>
+        <p>Full-stack RBAC &amp; payroll platform with role-based dashboards for Admin, HR, Manager, and Employee, backed by Strapi CMS.</p>
+        <ul class="bullet-list compact">
+          <li>Engineered payroll automation — custom late-entry and absence calculations feeding detailed salary breakdowns.</li>
+          <li>Secure role-based dashboards limiting feature access, with real-time attendance and leave-request status.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">React</span><span class="tag">Redux Toolkit</span><span class="tag">Strapi CMS</span><span class="tag">Tailwind CSS</span>
+        </div>
+        <a class="btn btn-ghost btn-small" href="https://github.com/FarhaanSolanki24/attendancemanagement" target="_blank" rel="noopener">View code →</a>
+      </article>
+
+      <article class="project-card">
+        <img class="project-card-media" src="assets/shop-hub.jpg" alt="Shop Hub — e-commerce landing page" loading="lazy" />
+        <div class="project-card-top">
+          <h3>Shop Hub — E-Commerce</h3>
+          <span class="code-badge">Code</span>
+        </div>
+        <p>A full-featured e-commerce app with catalog browsing, cart, checkout, and order tracking, built on the Fake Store API.</p>
+        <ul class="bullet-list compact">
+          <li>Redux Toolkit for auth, cart, and order workflows; role-based access with login/logout state.</li>
+          <li>Category filtering, search, sorting, and pagination, plus full order history and tracking.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">React</span><span class="tag">Redux Toolkit</span><span class="tag">Fake Store API</span><span class="tag">Tailwind CSS</span>
+        </div>
+        <a class="btn btn-ghost btn-small" href="https://github.com/FarhaanSolanki24/e-commerce" target="_blank" rel="noopener">View code →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="panel">
+    <div class="panel-head">
+      <h2>Skills</h2>
+    </div>
+    <div class="skill-groups">
+      <div class="skill-group">
+        <span class="skill-group-label">Core</span>
+        <div class="tag-row">
+          <span class="tag">React.js</span><span class="tag">JavaScript (ES6+)</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Tailwind CSS</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <span class="skill-group-label">State management</span>
+        <div class="tag-row">
+          <span class="tag">Redux Toolkit</span><span class="tag">Async Thunks</span><span class="tag">Context API</span><span class="tag">Custom Hooks</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <span class="skill-group-label">API &amp; auth</span>
+        <div class="tag-row">
+          <span class="tag">REST APIs</span><span class="tag">WebSockets</span><span class="tag">JWT</span><span class="tag">RBAC</span><span class="tag">Axios</span><span class="tag">Error Boundaries</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <span class="skill-group-label">Performance</span>
+        <div class="tag-row">
+          <span class="tag">React.memo</span><span class="tag">useMemo</span><span class="tag">Lazy Loading</span><span class="tag">Code Splitting</span><span class="tag">DevTools Profiler</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <span class="skill-group-label">Backend (working knowledge)</span>
+        <div class="tag-row">
+          <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Strapi CMS</span><span class="tag">PHP</span><span class="tag">MySQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <span class="skill-group-label">Tools</span>
+        <div class="tag-row">
+          <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">Postman</span><span class="tag">Chrome DevTools</span><span class="tag">Vercel</span><span class="tag">Figma</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="panel">
+    <div class="panel-head">
+      <h2>Education</h2>
+    </div>
+    <div class="edu-row">
+      <div>
+        <h3>Integrated MCA</h3>
+        <span class="timeline-meta">Mumbai University · 2025 – Present</span>
+      </div>
+    </div>
+    <div class="edu-row">
+      <div>
+        <h3>B.Sc. Information Technology</h3>
+        <span class="timeline-meta">Chikitsak Samuha's Sir Sitaram &amp; Lady Shantabai College · Jul 2022 – Apr 2025 · CGPA 8.7/10</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="panel contact-panel">
+    <div class="panel-head">
+      <h2>Contact</h2>
+    </div>
+    <p class="contact-lead">Open to Front-End and Full-Stack Developer roles — remote or Mumbai-based. Reach out directly, or find me on either platform below.</p>
+    <div class="contact-grid">
+      <div class="contact-detail">
+        <span class="contact-detail-label">Email</span>
+        <a href="mailto:farhansolanki111@gmail.com">farhansolanki111@gmail.com</a>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Phone</span>
+        <a href="tel:+919167356311">+91 9167356311</a>
+      </div>
+    </div>
+    <div class="contact-links">
+      <a class="btn btn-primary" href="mailto:farhansolanki111@gmail.com">Email me</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/mohd-farhaan-sadiq-solanki-/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="https://github.com/FarhaanSolanki24" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span>Mohd Farhaan Sadiq Solanki · Mumbai, India</span>
+    <span>Built with HTML, CSS &amp; JS</span>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
